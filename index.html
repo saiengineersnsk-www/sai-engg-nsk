@@ -402,7 +402,7 @@
           </div>
           <h3 class="text-xl font-bold text-slate-800">Admin Authentication</h3>
           <p class="text-xs text-slate-400 mt-1 max-w-xs">
-            Unlock the student database registry. Entering default passcode <strong>1234</strong>.
+            Unlock the student database registry.<strong>----</strong>.
           </p>
         </div>
 
@@ -575,7 +575,7 @@
 
           <div>
             <label class="block text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Dashboard Unlock Passcode</label>
-            <input type="text" id="settings-passcode" placeholder="1234" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-primary text-sm font-semibold text-slate-800">
+            <input type="text" id="settings-passcode" placeholder="0106" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-primary text-sm font-semibold text-slate-800">
             <p class="text-[10px] text-slate-400 mt-1">Change the local passcode required to unlock the Admin Panel (default 1234).</p>
           </div>
 
@@ -684,7 +684,7 @@
     let appConfig = {
       appsScriptUrl: localStorage.getItem('sai_apps_script_url') || '',
       isSheetConnected: localStorage.getItem('sai_sheet_connected') === 'true',
-      passcode: localStorage.getItem('sai_admin_passcode') || '1234'
+      passcode: localStorage.getItem('sai_admin_passcode') || '0106'
     };
 
     // Prepopulate some realistic records if database is empty on first load
@@ -1405,7 +1405,7 @@
       const code = document.getElementById('settings-passcode').value.trim();
 
       appConfig.appsScriptUrl = url;
-      appConfig.passcode = code || '1234';
+      appConfig.passcode = code || '0106';
 
       localStorage.setItem('sai_apps_script_url', url);
       localStorage.setItem('sai_admin_passcode', appConfig.passcode);
